@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+.tech-icons {
+  position: relative;
+  text-align: center;
+  transition: padding-bottom 0.3s ease; /* Smooth transition for padding */
+}
+
+.icon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container .icon-text {
+  position: absolute;
+  bottom: -30px;  /* Adjust the position of text below the icon */
+  opacity: 0;
+  font-size: 14px;  /* Default font size */
+  width: 100%;  /* Ensure the text is fully visible */
+  text-align: center;
+  transition: opacity 0.3s ease, font-size 0.3s ease, bottom 0.3s ease;
+}
+
+.icon-container:hover .icon-text {
+  opacity: 1;
+  font-size: 16px;  /* Font size on hover */
+  bottom: -10px;  /* Move the text slightly up to make it visible */
+}
+
+.icon-container:hover {
+  padding-bottom: 30px;  /* Increase the space at the bottom to reveal the text */
+}
