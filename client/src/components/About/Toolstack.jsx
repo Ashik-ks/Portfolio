@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { SiVisualstudiocode, SiPostman, SiSlack, SiNetlify } from "react-icons/si";
+import * as SiIcons from "react-icons/si";  // Import all icons from Si
 import { FaGitSquare, FaAws } from "react-icons/fa"; // Git and AWS icons
 import { IoLogoGithub } from "react-icons/io"; // GitHub Icon
 import { MdApi } from "react-icons/md"; // REST API Icon (Generic)
@@ -9,19 +9,19 @@ function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <SiIcons.SiVim /> {/* Alternative to VS Code */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
+        <SiIcons.SiPostman />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <FaAws />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNetlify />
+        <SiIcons.SiNetlify />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSlack />
+        <SiIcons.SiSlack />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <IoLogoGithub />
