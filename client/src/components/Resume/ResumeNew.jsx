@@ -5,8 +5,10 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';  // Import the styles
 import { pdfjs } from 'react-pdf'; // You may still need pdfjs for worker support
-import pdfFile from "../../assets/ASHIK KS.pdf"; // Path to the PDF file
-import pdfpic from "../../../Images/Screenshot 2024-12-22 122540.png"; // Path to the image
+
+// Paths updated for assets located in the public directory
+import pdfFile from "../../../public/ASHIK KS.pdf"; // Corrected path to the PDF file
+import pdfpic from "../../../public/Screenshot 2024-12-22 122540.png"; // Corrected path to the image
 
 // Configure the worker using the CDN
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -41,11 +43,11 @@ function ResumeNew() {
             &nbsp;Download CV
           </Button>
         </Row>
-          <Row className="resume">
-            {/* Use pdfpic for displaying the CV as an image */}
-            <img src={pdfpic} alt="CV Preview" style={{ maxWidth: '60%', height: 'auto' }} />
-          </Row>
 
+        <Row className="resume">
+          {/* Use pdfpic for displaying the CV as an image */}
+          <img src={pdfpic} alt="CV Preview" style={{ maxWidth: '60%', height: 'auto' }} />
+        </Row>
 
         {/* Download Button Again */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
