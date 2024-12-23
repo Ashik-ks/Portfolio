@@ -8,7 +8,7 @@ import { pdfjs } from 'react-pdf'; // You may still need pdfjs for worker suppor
 
 // Paths updated for assets located in the public directory
 import pdfFile from "../../../public/ASHIK-KS-new.pdf"; // Corrected path to the PDF file
-import pdfpic from "../../../public/Screenshot 2024-12-22 122540.png"; // Corrected path to the image
+import pdfpic from "../../../public/Screenshot 2024-12-23 142844.png"; // Corrected path to the image
 
 // Configure the worker using the CDN
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
