@@ -7,7 +7,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';  // Import the styles
 import { pdfjs } from 'react-pdf'; // You may still need pdfjs for worker support
 
 // Paths updated for assets located in the public directory
-import pdfFile from "../../../public/ASHIK KS-new.pdf"; // Corrected path to the PDF file
+import pdfFile from "../../../public/ASHIK-KS-new.pdf"; // Corrected path to the PDF file
 import pdfpic from "../../../public/Screenshot 2024-12-22 122540.png"; // Corrected path to the image
 
 // Configure the worker using the CDN
