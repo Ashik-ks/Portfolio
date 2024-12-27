@@ -23,26 +23,33 @@ function ContactMe() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // EmailJS Service Setup - Replace with your actual service and template IDs
+  
+    console.log(formData); // Log the form data to check if it's correct
+  
     emailjs
-    .send(
-      'service_o5m5x8z', // Your service ID
-      'template_vq8exu2', // Your template ID
-      formData,           // Form data to be passed to the template
-      'rgdHULDEYwQVCXarK' // Your user ID
-    )
-    .then(
-      (response) => {
-        console.log('Email sent successfully:', response);
-        setStatus("Message sent successfully!");
-      },
-      (error) => {
-        console.error('Error sending email:', error);
-        setStatus("Oops! Something went wrong. Please try again later.");
-      }
-    );  
+      .send(
+        'service_o5m5x8z',  // Your EmailJS service ID
+        'template_mxrdk0s',  // Your EmailJS template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'rgdHULDEYwQVCXarK'  // Your EmailJS user ID
+      )
+      .then(
+        (response) => {
+          console.log('Email sent successfully:', response);
+          setStatus("Message sent successfully!");
+        },
+        (error) => {
+          console.error('Error sending email:', error);
+          setStatus("Oops! Something went wrong. Please try again later.");
+        }
+      );
   };
+  
 
   return (
     <div>
