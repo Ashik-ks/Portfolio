@@ -26,22 +26,22 @@ function ContactMe() {
 
     // EmailJS Service Setup - Replace with your actual service and template IDs
     emailjs
-      .send(
-        'service_o5m5x8z', // Replace with your EmailJS service ID
-        'template_vq8exu2', // Replace with your EmailJS template ID
-        formData,           // Send formData to the EmailJS template
-        'rgdHULDEYwQVCXarK' // Replace with your EmailJS user ID
-      )
-      .then(
-        (response) => {
-          console.log('Email sent successfully:', response);
-          setStatus("Message sent successfully!");
-        },
-        (error) => {
-          console.error('Error sending email:', error);
-          setStatus("Oops! Something went wrong. Please try again later.");
-        }
-      );
+    .send(
+      'service_o5m5x8z', // Your service ID
+      'template_vq8exu2', // Your template ID
+      formData,           // Form data to be passed to the template
+      'rgdHULDEYwQVCXarK' // Your user ID
+    )
+    .then(
+      (response) => {
+        console.log('Email sent successfully:', response);
+        setStatus("Message sent successfully!");
+      },
+      (error) => {
+        console.error('Error sending email:', error);
+        setStatus("Oops! Something went wrong. Please try again later.");
+      }
+    );  
   };
 
   return (
